@@ -35,3 +35,5 @@ function divisorsOptimized(n) {
 
 console.log(divisors(36));
 console.log(divisors(12));
+console.log(divisors(12));
+console.log(divisors(12));
