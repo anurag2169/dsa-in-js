@@ -1,0 +1,22 @@
+.pie-chart {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: conic-gradient(
+    deepskyblue 0% 25%,
+    orangered 25% 85%,
+    #fff000 85%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 50%;
+}

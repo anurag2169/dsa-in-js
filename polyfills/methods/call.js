@@ -1,7 +1,5 @@
 // call Method Polyfill
 
-// what is call?
-// 1. always call used with a function
 
 function greet() {
   //   console.log(this.animal, "typically sleep between", this.sleepDuration);

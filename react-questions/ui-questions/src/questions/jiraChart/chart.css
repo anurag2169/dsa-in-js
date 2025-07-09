@@ -1,0 +1,89 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 25px 0px;
+}
+
+.toggleBtn {
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  cursor: pointer;
+  transition: all 0.2 ease-in-out;
+}
+.toggleBtn:active {
+  transform: scale(0.9);
+}
+
+.chart-container {
+  position: relative;
+  width: 40%;
+  height: 400px;
+  transition: all 0.2 ease-in-out;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  margin-top: 50px;
+  border-right: none;
+  border-top: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.y-axis-label {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateX(-50%) translateY(50%) rotate(-90deg);
+  font-weight: bold;
+}
+
+.x-axis-label {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  font-weight: bold;
+  transform: translate(50%, 300%);
+}
+
+.bar {
+  flex: 1;
+  position: relative;
+  animation-name: barHeight;
+  animation-duration: 0.9s;
+}
+@keyframes barHeight {
+  from {
+    height: 0;
+  }
+}
+
+.department-name {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -120%);
+  width: max-content;
+  z-index: 10;
+  background-color: black;
+  padding: 1px 6px;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.bar:hover .department-name {
+  opacity: 1;
+}
