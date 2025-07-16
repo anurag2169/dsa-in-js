@@ -157,7 +157,29 @@ class doublyLinkedist {
     }
     this.remove(current.value);
   }
-  
+
+  get(index) {
+    if (index < 0 || index >= this.length) {
+      return;
+    }
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      current = current.next;
+    }
+    return current.value;
+  }
+
+  find(value) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.value === value) {
+        return current;
+      }
+      current = current.next;
+    }
+
+    return null;
+  }
 }
 
 const list = new doublyLinkedist();
@@ -178,7 +200,7 @@ list.insertAt(2, 50);
 console.log(list.printForward());
 list.removeAt(4);
 console.log(list.printForward());
-
+console.log(list.get(4));
 
 // merge two sorted linked list
 // Remove Duplicates from a Sorted Linked List
