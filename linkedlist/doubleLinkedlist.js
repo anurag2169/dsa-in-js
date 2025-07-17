@@ -107,6 +107,8 @@ class doublyLinkedist {
       current.next = current.prev;
       current.prev = temp;
 
+      console.log(current);
+
       current = current.prev;
     }
 
@@ -180,27 +182,63 @@ class doublyLinkedist {
 
     return null;
   }
+
+  hasCycle() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  detectCycle() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow === fast) {
+        let pointer = this.head;
+        while (pointer !== slow) {
+          pointer = pointer.next;
+          slow = slow.next;
+        }
+        return pointer;
+      }
+    }
+    return null;
+  }
 }
 
 const list = new doublyLinkedist();
-list.append(10);
-list.append(20);
-list.append(30);
-list.prepend(5);
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// list.prepend(5);
 // console.dir(list, { depth: null });
 // list.remove(20);
-console.log(list.printForward()); // Should print: [5, 10, 30]
+// console.log(list.printForward()); // Should print: [5, 10, 30]
 // console.log(list.printBackward()); // Should print: [30, 10, 5]
 
 // console.log("Before Reverse:", list.printForward());
 // list.reverse();
 // console.log("After Reverse:", list.printForward());
-
-list.insertAt(2, 50);
-console.log(list.printForward());
-list.removeAt(4);
-console.log(list.printForward());
-console.log(list.get(4));
+// console.log(list.hasCycle());
+// console.log(list.detectCycle());
+// list.insertAt(2, 50);
+// console.log(list.printForward());
+// list.removeAt(4);
+// console.log(list.printForward());
+// console.log(list.get(4));
 
 // merge two sorted linked list
 // Remove Duplicates from a Sorted Linked List
@@ -208,3 +246,28 @@ console.log(list.get(4));
 // Implement a stack using singly linked list
 // Remove every k-th node of the linked list
 // Remove duplicates from an unsorted doubly linked list
+
+// cycle detection testing
+list.append(10); // index 0
+list.append(20); // index 1
+list.append(30); // index 2
+list.append(40); // index 3
+list.append(50); // index 4
+
+// Manually get nodes
+// let node1 = list.head.next; // node with value 20 (index 1)
+// let node4 = list.head.next.next.next.next; // node with value 50 (index 4)
+
+// // Create cycle: 50 → 20
+// node4.next = node1;
+
+console.log("Cycle exists:", list.hasCycle());
+// ✅ Should print: true
+
+let cycleStart = list.detectCycle();
+if (cycleStart) {
+  console.log("Cycle starts at node with value:", cycleStart.value);
+  // ✅ Should print: 20
+} else {
+  console.log("No cycle detected");
+}
