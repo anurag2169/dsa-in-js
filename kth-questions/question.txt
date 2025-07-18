@@ -1,0 +1,45 @@
+ Kth-Based Questions by Topic:
+🔹 1. Array
+Question	Topic(s)
+✅ Find the Kth largest/smallest element in an array	Heap / QuickSelect / Sorting
+✅ Find the Kth missing positive number	Binary Search
+✅ Find the Kth non-repeating element	HashMap + Frequency
+✅ Find the Kth distinct element in an array	Set / Map
+
+🔹 2. Sorting
+Question	Topic(s)
+✅ Sort an array and return the Kth largest element	Sorting
+✅ Find the Kth smallest pair distance	Binary Search + Sorting
+✅ Return the Kth smallest number in a sorted matrix	Heap / Binary Search
+
+🔹 3. Searching
+Question	Topic(s)
+✅ Find the Kth missing number from a sorted array	Binary Search
+✅ Find Kth element in two sorted arrays (merge sorted arrays)	Binary Search
+✅ Find Kth positive integer missing from array	Prefix Sum / Binary Search
+
+🔹 4. Linked List
+Question	Topic(s)
+✅ Find the Kth node from end of a linked list	Two Pointers (Slow/Fast)
+✅ Reverse every K nodes in a linked list	Recursion + Linked List
+✅ Remove the Kth node from end	Dummy Node + Two Pointers
+
+🔹 5. Heap / Priority Queue
+Question	Topic(s)
+✅ Find the Kth largest/smallest element	Heap
+✅ Find K largest numbers in an array	Heap
+✅ K closest points to origin	Heap + Math
+✅ K frequent elements in an array	HashMap + Heap
+
+🔹 6. String
+Question	Topic(s)
+✅ Find the Kth non-repeating character	HashMap
+✅ Return the Kth substring in lexicographical order	Sorting
+✅ Find the Kth largest palindrome substring	String + Heap
+
+🔹 7. Tree / Graph (For more advanced prep)
+Question	Topic(s)
+✅ Find the Kth smallest element in BST	Inorder Traversal
+✅ Kth ancestor of a node in a tree	DFS / Binary Lifting
+✅ Kth farthest node in graph	Dijkstra / BFS
+
