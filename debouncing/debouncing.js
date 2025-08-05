@@ -14,7 +14,6 @@ function debounce(fn, delay) {
 // Usage
 const debounced = debounce((x) => console.log(x), 3);
 
-
 debounced(1); // 1
 debounced(2); // 2
 debounced(3); // 3
